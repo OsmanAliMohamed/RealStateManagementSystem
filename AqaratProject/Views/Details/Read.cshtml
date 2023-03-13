@@ -1,0 +1,87 @@
+﻿<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Listing Details </title>
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <link rel="stylesheet" href="~/css/add.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script>
+        $(document).ready(function () {
+            $("tr:even").css("background-color", "#eee");
+        });
+    </script>
+</head>
+
+<body>
+    
+    <div class="page-header" style="margin-top: 10px; margin-left: 50px;">
+        <h1> Listing Details </h1>
+        <input type="submit" value="buying" class="buy">
+    </div>
+    <table>
+        <tr>
+            <td> Floor </td>
+            <td><input type="number" value="@Session["floor"]" id="floor" name="floor" class="input" min="0" max="100" required inputmode="numeric" readonly> </td>
+        </tr>
+        <tr>
+            <td> Room </td>
+            <td> <input type="number" value="@Session["room"]" id="room" name="room" class="input" min="1" max="500" required inputmode="numeric" readonly> </td>
+        </tr>
+        <tr>
+            <td> Bathrooms </td>
+            <td> <input type="number" value="@Session["bathroom"]" class="input" id="bathroom" name="bathroom" min="1" max="20" required inputmode="numeric" readonly> </td>
+        </tr>
+        <tr>
+            <td> Size (in meters) </td>
+            <td> <input type="number" value="@Session["size"]" class="input" id="size" name="size" required inputmode="numeric" readonly> </td>
+        </tr>
+        <tr>
+            <td> Finishing type </td>
+            <td> <input type="text" value="@Session["finshtype"]" class="input" id="finishingType" name="finishingType" required readonly style="width: 200px;"> </td>
+        </tr>
+        <tr>
+            <td> Price - EGP </td>
+            <td> <input type="number" value="@Session["price"]" class="input" name="price" id="price" inputmode="numeric" required readonly> </td>
+        </tr>
+        <tr>
+            <td> Year Built / Deliver Year </td>
+            <td> <input type="number" value="@Session["year"]" class="input" id="deliver_year" name="deliver_year" inputmode="numeric" required readonly> </td>
+        </tr>
+        <tr>
+            <td> View </td>
+            <td> <input type="text" value="@Session["view"]" class="input" id="prop_view" name="prop_view" required readonly style="width: 200px;"> </td>
+        </tr>
+        <tr>
+            <td> Publish Date </td>
+            <td> <input type="text" class="input" id="publish_date" name="publish_date" required readonly style="width: 200px;"> </td>
+        </tr>
+        <tr>
+            <td> Property Address </td>
+            <td> <input type="text" value="@Session["address"]" class="input" id="prop_address" name="prop_address" required maxlength="100" readonly> </td>
+        </tr>
+    </table>
+    <marquee width="100%" height="100%" direction="right">
+        <img class="Property-image" src="~/img/@Session["property-img"] image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+        <img class="Property-image" src="~/img/no image.jpg" alt="">
+
+    </marquee>
+</body>
+
+</html>
+

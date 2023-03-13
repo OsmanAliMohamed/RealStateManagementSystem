@@ -1,0 +1,380 @@
+﻿@using AqaratProject.Models
+@model user
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> User Page </title>
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+
+<body>
+    
+    <!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+            <a href="@Url.Action("HomePage", "Home")" class="logo"> Real <img src="~/img/logo.jpg"> Estate </a>
+            <ul class="main-nav">
+                <li><a href="@Url.Action("ShowAll", "Property")">Show Property</a></li>
+                <li><a href="#add">Add Property</a></li>
+                <li><a href="#events">Events</a></li>
+                <li><a href="#stats"> Stats </a></li>
+                <li>
+                    <a href="#"><img class="logimg" src="~/img/@Model.img" style="height:50px;width:50px;border-radius:50%;margin-right:15px;" alt="">Welcome, @Model.name</a>
+                    <!-- Start Megamenu -->
+                    <div class="mega-menu">
+                        <ul class="links">
+                            <li>
+                                <a href="/User/MyProfile"><i class="fa-solid fa-user-pen"></i> Edit Profile</a>
+                            </li>
+                        </ul>
+                        <ul class="links">
+                            <li>
+                                <a href="/User/MyProperties"><i class="fa-solid fa-user"></i> My Profile</a>
+                            </li>
+                        </ul>
+                        <ul class="links">
+                            <li>
+                                <a class="lo" style="color: red;" href="/Home/HomePage"><i class="fa-solid fa-arrow-right-from-bracket"></i> Logout </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <!-- End Megamenu -->
+                </li>
+                
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1> Welcome, To " AQrat " </h1>
+                <p> Here I will share everything about real estate, selling, renting, booking rooms </p>
+            </div>
+            <div class="image">
+                <img src="~/img/contain.jpg" alt="" />
+            </div>
+        </div>
+        <a href="#articles" class="go-down">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!-- End Landing -->
+      <!-- start add-->
+    <div class="add" id="add">
+        <h3 class="header-title-color"> Add Your Property </h3>
+        <div class="d-flex element-list__item">
+            <a href="@Url.Action("AddProperty","Property")" class="element-list__item_container d-flex flex-row">
+                <img class="element-list__item_icon" src="https://aqarmap.com.eg/images/home/ic_sell_property.svg?fde72a664-egypt">
+                <div class="d-flex flex-column justify-content-center">
+                    <label class="element-list__item_title">
+                        Advertise Your Property
+                    </label>
+                    <p class="element-list__item_content">
+                        Reach millions of visitors every month .
+                        You can advertise on AQrat easily .
+                        Register all details and photos of the property and put your phone number and buyers will contact you directly .
+                    </p>
+                </div>
+            </a>
+        </div>
+    </div>
+    <!-- end add -->
+    <!-- Start Events -->
+    <div class="events" id="events">
+        <div class="dots dots-up"></div>
+        <div class="dots dots-down"></div>
+        <h2 class="main-title">Latest Events</h2>
+        <div class="container">
+            <img src="~/img/event.jpg" alt="" />
+            <div class="info">
+                <div class="time">
+                    <div class="unit" id="days">
+                        <span>0</span>
+                        <span>Days</span>
+                    </div>
+                    <div class="unit" id="hours">
+                        <span>0</span>
+                        <span>Hours</span>
+                    </div>
+                    <div class="unit" id="minutes">
+                        <span>0</span>
+                        <span>Minutes</span>
+                    </div>
+                    <div class="unit" id="seconds">
+                        <span>0</span>
+                        <span>Seconds</span>
+                    </div>
+                </div>
+                <h2 class="title">Customer Effectiveness 2022</h2>
+                <p class="description">
+                    You have to be a good follower of the site .
+                    <br> You have to follow up to get notifications , If someone adds an advertisement for a property, you
+                    will receive a notification of that and you will have the
+                    opportunity to win this property before anyone if it is suitable for you.
+                </p>
+            </div>
+            <div class="subscribe">
+                <form action="">
+                    <input type="email" placeholder="Enter Your Email" />
+                    <input type="submit" value="Subscribe" />
+                </form>
+            </div>
+        </div>
+    </div>
+    <!-- End Events -->
+    <!-- Start Team -->
+    <div class="team" id="team">
+        <h2 class="main-title">Team Members</h2>
+        <div class="container">
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_1.jpg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100000880396987" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/m_alfyad7" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mohammed_alfyad/" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Mohammed Alfyad</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01143117628</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_2.jpeg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100007170039762" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Omar Abdelrazek</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01126842680</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_3.jpg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100006378632599" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://www.instagram.com/mostafahosny99/?funlid=IxYFyoRUnHa5HEGQ" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Mostafa Hosny</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01140943934</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_4.jpg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/profile.php?id=100028704291723" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Othman Ali</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01155282129</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_5.jpg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/ali.kotb.3990" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                        <a href="https://twitter.com/Ali_Kotb_38?t=Ay-cXG2BQ42P6BShyornww&s=08" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Ali Kotb</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01067205869</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+            <div class="box">
+                <div class="data">
+                    <img src="~/img/team_6.jpg" alt="" />
+                    <div class="social">
+                        <a href="https://www.facebook.com/ali.mamdouh.50159" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </div>
+                </div>
+                <div class="info">
+                    <h3>Ali Mamdouh</h3>
+                    <p></p>
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>01152950014</span>
+                    </div>
+                    <p></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="spikes"></div>
+    <!-- End Team -->
+    <!-- Start Contact -->
+    <div class="contact" id="contact">
+        <div class="container">
+            <div class="main-heading">
+                <h2>Contact Us</h2>
+                <p style="font-weight: bold;">
+                    Do you have a problem using our website?
+                </p>
+            </div>
+            <div class="content">
+                <form action="/User/ContactUs">
+                    <input type="submit" value="Send Message" />
+                </form>
+                <div class="info">
+                    <h4>Get In Touch</h4>
+                    <span class="phone">+201143117628</span>
+                    <span class="phone">+201126842680</span>
+                    <h4>Where We Are</h4>
+                    <address>Egypt, Asyut</address>
+                </div>
+            </div>
+        </div>
+    </div>
+    <br>
+    <!-- End Contact -->
+    <!-- Start Stats -->
+    <div class="stats" id="stats">
+        <h2>Our Awesome Stats</h2>
+        <div class="container">
+            <div class="box">
+                <i class="far fa-user fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">Clients</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-home fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">Real Estate</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">City</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Stats -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>AQrat</h3>
+                <ul class="social">
+                    <li>
+                        <a href="https://www.facebook.com/groups/httpswww.youtube.comchanneluc6jgfvnajkhsjyiyu/"
+                           class="facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/akaratassuit" class="twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/ahlasyut2021/" class="instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    AQrat services help you buy and sell real estate easily in addition to providing you with essential
+                    information to
+                    make one of the most important financial decisions in your life.
+                </p>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info"> Egypt, Asyut </div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info"> Business Hours: From 10:00 AM To 10:00 BM </div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>+201143117628</span>
+                        <span>+201126842680</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box footer-gallery">
+                <img src="~/img/earth-globe.png" alt="" />
+                <img src="~/img/graph.png" alt="" />
+                <img src="~/img/location.png" alt="" />
+                <img src="~/img/locations.png" alt="" />
+                <img src="~/img/map.png" alt="" />
+                <img src="~/img/pay.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+    <script src="~/js/jquery-3.6.0.min.js"></script>
+    <script src="~/js/home.js"></script>
+</body>
+
+</html>

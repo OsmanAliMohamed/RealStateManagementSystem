@@ -1,0 +1,53 @@
+﻿<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Login</title>
+    <style>
+        body {
+            background-image: url("~/img/123.jpg");
+        }
+    </style>
+    <link rel="stylesheet" href="~/css/login.css">
+</head>
+<body>
+    <div class="group-action">
+        <div class="login">
+            <form class="form1" action="/Login/saveLogin" method="post">
+                <h1>Login</h1>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" required>
+                <a href="#">Forgot My Password ?</a>
+                <br>
+                <button type="submit">login</button>
+                <span>Not having an account !<a onclick="changeSection1()">Sign Up</a></span>
+            </form>
+        </div>
+        <div class="signup">
+            <form class="form2" action="/Login/saveSignup" method="post" >
+                <h1>Sign Up</h1>
+                <input type="text" id="name" name="name" placeholder="Full Name" required>
+                <input type="text" id="number" name="number" placeholder="Phone number" minlength="11" maxlength="11" required>
+                <input type="email" id="email" name="email" placeholder="Email" required>
+                <input type="password" id="password" name="password" placeholder="Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" minlength="8" maxlength="15" required>
+                <input type="password" id="conf_password" name="conf_password" placeholder="Confirm Password" pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}"
+                       title="Must contain at least one number and one uppercase and lowercase letter, and at least 8 or more characters" minlength="8" maxlength="15" required>
+                <input type="text" id="address" name="address" placeholder="Address" required>
+                <input type="date" id="age" name="age" required>
+                <div class="state">
+                    <label> Select you gender : </label>
+                    <input type="radio" id="male" name="gender" value="Male">
+                    <label for="male">Male</label>
+                    <input type="radio" id="female" name="gender" value="Female">
+                    <label for="female">Female</label>
+                </div>
+                <button type="submit" name="submit" value="signup">signup</button>
+                <span>Already have an account!<a onclick="changeSection2()">Sign In</a></span>
+            </form>
+        </div>
+    </div>
+    <script src="~/js/login.js"></script>
+</body>
+</html>

@@ -1,0 +1,91 @@
+﻿@using AqaratProject.Models;
+@model  List<Property>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    
+     <meta charset="UTF-8" />
+     <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title> Home Page </title>
+        <link rel="stylesheet" href="~/css/normalize.css" />
+        <link rel="stylesheet" href="~/css/home.css" />
+        <!-- Font Awesome -->
+        <link rel="stylesheet" href="~/css/all.min.css" />
+        <!-- Google Fonts -->
+        <link rel="preconnect" href="https://fonts.googleapis.com" />
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+        <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@4.6.1/dist/css/bootstrap.min.css">
+    <style>
+        body {
+            font-family: Arial;
+        }
+
+        * {
+            box-sizing: border-box;
+        }
+
+        form.example input[type=text] {
+            padding: 10px;
+            font-size: 17px;
+            border: 1px solid grey;
+            float: left;
+            width: 80%;
+            background: #f1f1f1;
+        }
+
+        form.example button {
+            float: left;
+            width: 20%;
+            padding: 10px;
+            background: #2196F3;
+            color: white;
+            font-size: 17px;
+            border: 1px solid grey;
+            border-left: none;
+            cursor: pointer;
+        }
+
+            form.example button:hover {
+                background: #0b7dda;
+            }
+
+        form.example::after {
+            content: "";
+            clear: both;
+            display: table;
+        }
+    </style>
+
+</head>
+<body>
+    
+    <h2 class="main-title"> My Properties </h2>
+    <div class="gallery" id="gallery">
+        <div class="container">
+         
+            @foreach (var property in Model)
+            {
+                <div class="box move">
+                    <img src="~/img/@property.property_image" alt="" />
+                    <div class="content">
+                        <h3> @property.price </h3>
+                        <p> @property.Location </p>
+                    </div>
+                    <div class="info">
+                        <a href="/User/DeleteProperty/@property.id">Delete</a>
+                    </div>
+
+                    
+                </div>
+            }
+        </div>
+    </div>
+    
+
+</body>
+</html>
+

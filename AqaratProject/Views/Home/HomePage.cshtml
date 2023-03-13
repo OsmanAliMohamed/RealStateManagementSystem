@@ -1,0 +1,258 @@
+﻿
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title> Home Page </title>
+    <link rel="stylesheet" href="~/css/normalize.css" />
+    <link rel="stylesheet" href="~/css/home.css" />
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="~/css/all.min.css" />
+    <!-- Google Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Cairo:wght@300;400;700&#038;display=swap" rel="stylesheet" />
+</head>
+<body>
+    <!-- Start Header -->
+    <div class="header" id="header">
+        <div class="container">
+            <a href="home.html" class="logo"> Real <img src="~/img/logo.jpg"> Estate </a>
+            <ul class="main-nav">
+                <li><a href="#services">Services</a></li>
+                <li><a href="#gallery">Gallery</a></li>
+                <li><a href="#features">Features</a></li>
+                <li><a href="#work-steps">How It Works</a></li>
+                <li><a class="lo" style="color: blue;" href="@Url.Action("loginPage","Login")"> Login </a></li>
+            </ul>
+        </div>
+    </div>
+    <!-- End Header -->
+    <!-- Start Landing -->
+    <div class="landing">
+        <div class="container">
+            <div class="text">
+                <h1> Welcome, To " AQrat " </h1>
+                <p> Here I will share everything about real estate, selling, renting, booking rooms </p>
+            </div>
+            <div class="image">
+                <img src="~/img/contain.jpg" alt="" />
+            </div>
+        </div>
+        <a href="#articles" class="go-down">
+            <i class="fas fa-angle-double-down fa-2x"></i>
+        </a>
+    </div>
+    <!-- End Landing -->
+    <!-- Start Features -->
+    <div class="features" id="features">
+        <h2 class="main-title">Features</h2>
+        <div class="container">
+            <div class="box quality">
+                <div class="img-holder"><img src="~/img/features-01.jpg" alt="" /></div>
+                <h2>Quality</h2>
+                <p>
+                    Our site guarantees you a safe and interesting experience to search for the best real estate at the best prices easily,
+                    whatever suits you and more.
+                </p>
+            </div>
+            <div class="box time">
+                <div class="img-holder"><img src="~/img/features-02.jpg" alt="" /></div>
+                <h2>Time</h2>
+                <p>
+                    Our site guarantees you the speed of delivery of the seller to the buyer to complete the purchase and rental operations
+                    in a short time.
+                </p>
+            </div>
+            <div class="box passion">
+                <div class="img-holder"><img src="~/img/features-03.jpg" alt="" </div>
+                <h2>Ease To Use</h2>
+                <p>Our site guarantees you ease of use in terms of buying, selling, browsing or searching for something specific</p>
+            </div>
+        </div>
+    </div>
+    <!-- End Features -->
+    <!-- Start Gallery -->
+    <div class="gallery" id="gallery">
+        <h2 class="main-title">Gallery</h2>
+        <div class="container">
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image1.jfif" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image2.jfif" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image3.jpg" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image4.jfif" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image5.jfif" alt="" />
+                </div>
+            </div>
+            <div class="box">
+                <div class="image">
+                    <img src="~/img/image6.jfif" alt="" />
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Gallery -->
+    <!-- Start Services -->
+    <div class="services" id="services">
+        <h2 class="main-title">Services</h2>
+        <div class="container">
+            <div class="box">
+                <i class="fas fa-user-shield fa-4x"></i>
+                <h3>Security</h3>
+                <div class="info">
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-tools fa-4x"></i>
+                <h3>Fixing Issues</h3>
+                <div class="info">
+                </div>
+            </div>
+            <div class="box">
+                <i class="fas fa-house-user fa-4x"></i>
+                <h3>Rental</h3>
+                <div class="info">
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Services -->
+    <!-- Start Work Steps -->
+    <div class="work-steps" id="work-steps">
+        <h2 class="main-title">How It Works ?</h2>
+        <div class="container">
+            <img src="img/work.jpg" alt="" class="image" />
+            <div class="info">
+                <div class="box">
+                    <img src="img/work-step.png" alt="" />
+                    <div class="text">
+                        <h3>For Buyer</h3>
+                        <p>
+                            1 - Log in to the site or create a new account.
+                            <br>
+                            2 - Look for the list of ads.
+                            <br>
+                            3- Choose what suits you from the list.
+                            <br>
+                            4 - Click buy and follow up with a member of the team to complete the process.
+                        </p>
+                    </div>
+                </div>
+                <div class="box">
+                    <img src="img/work-step.png" alt="" />
+                    <div class="text">
+                        <h3>For Seller</h3>
+                        <p>
+                            1 - Log in to the site or create a new account.
+                            <br>
+                            2 - Look for the list of ads.
+                            <br>
+                            3- Add what you want to show in the list with all the details.
+                            <br>
+                            4- Wait for approval and communication from members when there is a buyer.
+                        </p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- End Work Steps -->
+    <!-- Start Stats -->
+    <div class="stats" id="stats">
+        <h2>Our Awesome Stats</h2>
+        <div class="container">
+            <div class="box">
+                <i class="far fa-user fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">Clients</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-home fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">Real Estate</span>
+            </div>
+            <div class="box">
+                <i class="fas fa-globe-asia fa-2x fa-fw"></i>
+                <span class="number">0</span>
+                <span class="text">City</span>
+            </div>
+        </div>
+    </div>
+    <!-- End Stats -->
+    <!-- Start Footer -->
+    <div class="footer">
+        <div class="container">
+            <div class="box">
+                <h3>AQrat</h3>
+                <ul class="social">
+                    <li>
+                        <a href="https://www.facebook.com/groups/httpswww.youtube.comchanneluc6jgfvnajkhsjyiyu/" class="facebook" target="_blank">
+                            <i class="fab fa-facebook-f"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://twitter.com/akaratassuit" class="twitter" target="_blank">
+                            <i class="fab fa-twitter"></i>
+                        </a>
+                    </li>
+                    <li>
+                        <a href="https://www.instagram.com/ahlasyut2021/" class="instagram" target="_blank">
+                            <i class="fab fa-instagram"></i>
+                        </a>
+                    </li>
+                </ul>
+                <p class="text">
+                    AQrat services help you buy and sell real estate easily in addition to providing you with essential information to
+                    make one of the most important financial decisions in your life.
+                </p>
+            </div>
+            <div class="box">
+                <div class="line">
+                    <i class="fas fa-map-marker-alt fa-fw"></i>
+                    <div class="info"> Egypt, Asyut </div>
+                </div>
+                <div class="line">
+                    <i class="far fa-clock fa-fw"></i>
+                    <div class="info"> Business Hours: From 10:00 AM To 10:00 BM </div>
+                </div>
+                <div class="line">
+                    <i class="fas fa-phone-volume fa-fw"></i>
+                    <div class="info">
+                        <span>+201143117628</span>
+                        <span>+201126842680</span>
+                    </div>
+                </div>
+            </div>
+            <div class="box footer-gallery">
+                <img src="~/img/earth-globe.png" alt="" />
+                <img src="~/img/graph.png" alt="" />
+                <img src="~/img/location.png" alt="" />
+                <img src="~/img/locations.png" alt="" />
+                <img src="~/img/map.png" alt="" />
+                <img src="~/img/pay.png" alt="" />
+            </div>
+        </div>
+    </div>
+    <!-- End Footer -->
+</body>
+
+</html>
